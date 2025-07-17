@@ -1,0 +1,45 @@
+
+.login-card {
+    max-width: 420px;
+    width: 100%;
+}
+
+.password-container {
+    position: relative;
+}
+
+.password-toggle {
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #6c757d;
+}
+
+.divider {
+    text-align: center;
+    margin: 1rem 0;
+    position: relative;
+}
+
+.divider span {
+    background: #fff;
+    padding: 0 10px;
+    position: relative;
+    z-index: 2;
+}
+
+.divider::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    border-top: 1px solid #dee2e6;
+    z-index: 1;
+}
+
+.logo-img {
+    width: 80px;
+}
