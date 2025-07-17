@@ -7,5 +7,8 @@
 <!-- SweetAlert2 JS -->
 <script src="/sia_enrollment/assets/js/sweetalert2.min.js"></script>
 
+<!--Custom Js-->
+
+<script src="/assets/js/"></script>
 </body>
 </html>

@@ -21,6 +21,15 @@
             </a>
             <h2 class="h5 text-center mb-4">Login to your account</h2>
 
+            <?php
+                session_start();
+
+                if (!empty($_SESSION['login_error'])) {
+                    echo '<div class="alert alert-danger text-start" role="alert">' . htmlspecialchars($_SESSION['login_error']) . '</div>';
+                    unset($_SESSION['login_error']);
+                }
+            ?>
+
             <form action="student_login.php" method="POST">
                 <div class="mb-3">
                     <label for="studentNumber" class="form-label">Student Number</label>
