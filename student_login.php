@@ -12,7 +12,7 @@ $password = trim($_POST['password'] ?? '');
 
 if (empty($studentNumber) || empty($password)) {
     $_SESSION['login_error'] = 'Please enter both student number and password';
-    header('Location: login.php');
+    header('Location: student_login_form.php');
     exit;
 }
 
@@ -31,6 +31,7 @@ try {
             $_SESSION['student_number'] = $user['student_number'];
             $_SESSION['full_name'] = $user['first_name'] . ' ' . $user['last_name'];
             $_SESSION['logged_in'] = true;
+            $_SESSION['login_success'] = 'Welcome back, ' . $_SESSION['full_name'] . '!';
 
             header('Location: ./student/index.php');
             exit;
@@ -44,6 +45,6 @@ try {
 } catch (PDOException $e) {
     error_log("Login error: " . $e->getMessage());
     $_SESSION['login_error'] = 'System error. Please try again.';
-    header('Location: login.php');
+    header('Location: student_login_form.php');
     exit;
 }

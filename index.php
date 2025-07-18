@@ -194,7 +194,7 @@
                         <a class="nav-link" href="#contact">Contact</a>
                     </li>
                     <li class="nav-item ms-lg-3">
-                        <a class="btn btn-primary" href="login.php">
+                        <a class="btn btn-primary" href="student_login_form.php">
                             <i class="fas fa-user me-1"></i> Login
                         </a>
                     </li>

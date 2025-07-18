@@ -47,7 +47,7 @@
                     </div>
                 </div>
 
-                <button type="submit" class="btn btn-primary w-100 mb-3">Sign in</button>
+                <button type="submit" class="btn btn-dark w-100 mb-3">Sign in</button>
 
                 <div class="text-center text-muted mt-4" style="font-size: 0.75rem;">
                     Copyright © EnrollHub. Developed by Dave Magno 2025.
