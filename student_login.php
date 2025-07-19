@@ -17,7 +17,7 @@ if (empty($studentNumber) || empty($password)) {
 }
 
 try {
-    $stmt = $db->prepare("SELECT student_id, student_number, first_name, last_name 
+    $stmt = $db->prepare("SELECT student_id, student_number, first_name, last_name, accountabilities
                          FROM tbl_students 
                          WHERE student_number = :studentNumber
                          LIMIT 1");
@@ -30,6 +30,7 @@ try {
             $_SESSION['student_id'] = $user['student_id'];
             $_SESSION['student_number'] = $user['student_number'];
             $_SESSION['full_name'] = $user['first_name'] . ' ' . $user['last_name'];
+            $_SESSION['accountabilities'] = $user['accountabilities'];
             $_SESSION['logged_in'] = true;
             $_SESSION['login_success'] = 'Welcome back, ' . $_SESSION['full_name'] . '!';
 
@@ -39,7 +40,7 @@ try {
     }
 
     $_SESSION['login_error'] = 'Student number or password is incorrect';
-    header('Location: login.php');
+    header('Location: student_login_form.php');
     exit;
 
 } catch (PDOException $e) {
